@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* PrimeNG */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+/* AG Grid */
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+.card {
+  background: var(--surface-card);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.post-content {
+  line-height: 1.6;
+  color: var(--text-color);
+  white-space: pre-wrap;
+}
+
+/* AG Grid Customization */
+.ag-theme-alpine {
+  /* Use app's font family */
+  --ag-font-family: var(--font-family);
+
+  /* Header styles */
+  --ag-header-background-color: var(--primary-color);
+  --ag-header-foreground-color: var(--primary-color-text);
+  --ag-header-height: 50px;
+  --ag-header-cell-hover-background-color: color-mix(
+    in srgb,
+    var(--primary-color) 90%,
+    #000
+  );
+  --ag-header-cell-moving-background-color: var(--primary-color);
+
+  /* Row styles */
+  --ag-row-hover-color: var(--surface-100);
+  --ag-odd-row-background-color: var(--surface-50);
+  --ag-row-border-color: var(--surface-200);
+
+  /* Other */
+  --ag-border-radius: var(--border-radius);
+  --ag-border-color: var(--surface-200);
+}
+
+.ag-theme-alpine .ag-header-cell-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.ag-theme-alpine .ag-cell {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+}
